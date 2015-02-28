@@ -1,0 +1,12 @@
+<h1>Editing Order</h1>
+
+<%= form_for @order do |f| %>
+  <%= @order.errors %>
+  <%= render 'shipping_step', f: f %>
+  <%= render 'billing_step', f: f %>
+  <%= render 'confirmation_step', f: f %>
+  <p><%= f.submit "Submit" %></p>
+<% end %>
+
+<%= link_to 'Show', @order %> |
+<%= link_to 'Back', orders_path %>
